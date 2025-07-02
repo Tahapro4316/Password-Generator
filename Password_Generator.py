@@ -1,24 +1,24 @@
 import random 
 
 try:
-    sifre_soru = int(input("Şifre oluşturmak istediğiniz karakter sayısını giriniz: "))
+    password_question = int(input("Enter the number of characters you want to create a password: "))
 except ValueError:
-    print("Lütfen geçerli bir sayı giriniz.")
+    print("Please enter a valid number.")
     exit()
 
-if sifre_soru <= 0:
-    print("Lütfen 0'dan büyük bir sayı giriniz.")
+if password_question <= 0:
+    print("Please enter a number greater than 0.")
     exit()
 
-sifreler = [
+passwords = [
     "+", "-", "/", "*", "!", "&", "$", "#", "?", "=", "@",
     "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
     "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
     "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
 ]
 
-sifre = ""
-for i in range(sifre_soru):
-    sifre += random.choice(sifreler)
+password = ""
+for i in range(password_question):
+    password += random.choice(passwords)
 
-print("Oluşturulan şifre:", sifre)
+print("Generated password:", password)
